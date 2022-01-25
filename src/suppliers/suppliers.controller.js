@@ -63,7 +63,7 @@ function update(req, res, next) {
     .catch(next);
 }
 
-async function destroy(req, res, next) {
+function destroy(req, res, next) {
   suppliersService
     .delete(res.locals.supplier.supplier_id)
     .then(() => res.sendStatus(204))
